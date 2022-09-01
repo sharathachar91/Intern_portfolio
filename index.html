@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sharath - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/b7e5d3d56b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- header -->
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="" class="logo">
+        <ul>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <p>Hi there!</p>
+        <h1>I'm <span>Sharath</span><br></h1>
+        <p style="font-size: 18px; margin-top: 5px;">I love crafting amazing user experiences using modern digital technologies.
+        <a href="#about" class="btn" style="margin-left: 0;">Know more</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- about -->
+  <div id="about" style="padding-top: 80px;">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="./images/aboutme 1Aboutme.jpg" alt="">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1><br><br>
+          <p>Hi! I'm Sharath, a front-end developement enthusiast based out of
+            Bangalore. <br><br>
+            I love to contribute towards building products that would make this world a better place for everybody. <br><br>
+            I see software as a tool that has great potential to drive humans towards even greater horizons than the ones conquered.
+            <br><br><br><br>
+          </p>
+
+          <div class="tab-title">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li>
+                <span>Web Technologies</span><br>HTML, CSS, Javascript, SVG
+              </li>
+              <li>
+                <span>Design</span><br>Figma               
+              </li>
+              <li><span>Version Control</span><br>Github</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li>
+                <span>2021 - Current</span><br>MakeWise
+              </li>
+              <li>
+                <span>2018 - 2019</span><br>Brady               
+              </li>
+              <li><span>2013 - 2017</span><br>Accenture</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="education">
+            <ul>
+              <li>
+                <span>2013</span><br>Bachelor of Engineering - Mechanical
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Projects -->
+
+  <div id="portfolio" style="margin-bottom: 50px;">
+    <div class="container">
+      <h1 class="sub-title">Projects</h1>
+      <div class="work-list">
+        
+        <div class="work">
+          <img src="./images/Tribute.jpg" alt="">
+          <div class="layer">
+            <h2>Tribute Page</h2>
+            <a href="https://github.com/sharathachar91/tributepage"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+
+        <div class="work">
+          <img src="./images/Resume 1JobApplication.jpg" alt="">
+          <div class="layer">
+            <h2>Job Application Form</h2>
+            
+            <a href="https://github.com/sharathachar91/jobform"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+
+        <div class="work">
+          <img src="./images/Books 1Documentation.jpg" alt="">
+          <div class="layer">
+            <h2>Technical Documentation</h2>
+            
+            <a href="https://github.com/sharathachar91/techdoc"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- <a href="#" class="btn">See more</a> -->
+    </div>
+  </div>
+
+
+    
+
+  <!-- contact -->
+<div id="contact">
+  <div class="container">
+    <div class="row">
+    
+    <div class="contact-left">
+      <h1 class="sub-title">Contact Me</h1>
+      <p><i class="fa-solid fa-paper-plane"></i>contact@example.com</p>
+      <p><i class="fa-solid fa-square-phone"></i>0123456789</p>
+      <!-- <div class="social-icons">
+        <a href=""><i class="fab fa-facebook"></i></a>
+        <a href=""><i class="fab fa-facebook"></i></a>
+        <a href=""><i class="fab fa-facebook"></i></a>
+        <a href=""><i class="fab fa-facebook"></i></a>
+      </div> -->
+      <a href="Sharath_Resume.pdf" class="btn btn2" download>Download CV</a>
+    </div>
+
+    <div class="contact-right">
+      <form name="submit-to-google-sheet">
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="Message" id="" cols="30" rows="6" placeholder="Your Message"></textarea>
+        <button type="submit" class="btn btn2">Submit</button>
+      </form>
+      <span id="msg"></span>
+    </div>
+  </div>
+  </div>
+
+  <div class="copyright">
+    <p>Copyright Sharath 2022</p>
+  </div>
+</div>
+
+
+
+  <script>
+    var tablinks = document.getElementsByClassName('tab-links');
+    var tabcontents = document.getElementsByClassName('tab-contents');
+//remove content from default active tab on clicking any of the tabs
+    function opentab(tabname){
+      for(tablink of tablinks){
+        tablink.classList.remove('active-link');
+      }
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove('active-tab');
+      }
+      //add underline
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add('active-tab');
+    }
+  </script>
+
+<script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxc4ED7olJyj42XwMjrHfBFI5fhpHla3uWHI_UL85RuoxepFz2D8he4xSr6yDIgoxcF4Q/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById('msg')
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {msg.innerHTML = "Message sent successfully"
+    setTimeout(function(){
+      msg.innerHTML = ""
+    },5000)
+    form.reset()
+    })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>
+</html>
